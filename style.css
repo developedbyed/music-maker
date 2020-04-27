@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 4rem;
+}
+.drums {
+    background: rgb(19, 19, 19);
+    height: 550px;
+    width: 550px;
+    -webkit-box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.39);
+    padding: 20px;
+    margin: 50px;
+    border-radius: 3%;
+}
+
+.drums > div {
+    width: 510px;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pad {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    background: royalblue;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 10%;
+}
+
+.pad input {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    opacity: 0;
+}
+
+.kick .pad {
+    background: #001eff;
+    box-shadow: 0px 0px 18px 3px rgb(0, 30, 255);
+    -webkit-box-shadow: 0px 0px 18px 3px rgb(0, 30, 255);
+    -moz-box-shadow: 0px 0px 18px 3px rgb(0, 30, 255);
+}
+.snare .pad {
+    background: #ff9900;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(255, 153, 0, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(255, 153, 0, 1);
+    box-shadow: 0px 0px 18px 2px rgba(255, 153, 0, 1);
+}
+.clap .pad {
+    background: #f000ff;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(240, 0, 255, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(240, 0, 255, 1);
+    box-shadow: 0px 0px 18px 2px rgba(240, 0, 255, 1);
+}
+.tom .pad {
+    background: #ffe700;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(255, 231, 0, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(255, 231, 0, 1);
+    box-shadow: 0px 0px 18px 2px rgba(255, 231, 0, 1);
+}
+.openhat .pad {
+    background: #4deeea;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(77, 238, 234, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(77, 238, 234, 1);
+    box-shadow: 0px 0px 18px 2px rgba(77, 238, 234, 1);
+}
+.cowbell .pad {
+    background: #0066ff;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(0, 102, 255, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(0, 102, 255, 1);
+    box-shadow: 0px 0px 18px 2px rgba(0, 102, 255, 1);
+}
+.hihat .pad {
+    background: #39c0ff;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(57, 192, 255, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(57, 192, 255, 1);
+    box-shadow: 0px 0px 18px 2px rgba(57, 192, 255, 1);
+}
+.crash .pad {
+    background: #74ee15;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(116, 238, 21, 1);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(116, 238, 21, 1);
+    box-shadow: 0px 0px 18px 2px rgba(116, 238, 21, 1);
+}

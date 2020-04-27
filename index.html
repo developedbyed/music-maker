@@ -1,41 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto:wght@300;400;900&display=swap"
+			rel="stylesheet"
+		/>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
-</head>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Document</title>
+	</head>
 
-<body>
-    <h1>Music Maker</h1>
-    <div class="drums">
-        <div class="kick">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-
-        </div>
-        <div class="snare">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.9/Tone.min.js"></script>
-    <script src="app.js"></script>
-</body>
-
+	<body>
+		<h1>Music Maker</h1>
+		<div class="drums">
+			<div class="kick">
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="kickInput"
+						type="checkbox"
+						onclick="changeColor('kick' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="snare">
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="snareInput"
+						type="checkbox"
+						onclick="changeColor('snare' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="clap">
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="clapInput"
+						type="checkbox"
+						onclick="changeColor('clap' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="tom">
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="tomInput"
+						type="checkbox"
+						onclick="changeColor('tom' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="openhat">
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="openhatInput"
+						type="checkbox"
+						onclick="changeColor('openhat' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="cowbell">
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="cowbellInput"
+						type="checkbox"
+						onclick="changeColor('cowbell' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="hihat">
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="hihatInput"
+						type="checkbox"
+						onclick="changeColor('hihat' , 8)"
+					/>
+				</div>
+			</div>
+			<div class="crash">
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 1)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 2)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 3)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 4)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 5)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 6)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 7)"
+					/>
+				</div>
+				<div class="pad">
+					<input
+						class="crashInput"
+						type="checkbox"
+						onclick="changeColor('crash' , 8)"
+					/>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.9/Tone.min.js"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
