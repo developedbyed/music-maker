@@ -88,35 +88,65 @@ let colorPallet = [
 		onValue: "#f67bff",
 	},
 	{
-		key: "crash",
+		key: "tom",
 		offValue: "#ffe700",
 		onValue: "#fff27c",
 	},
 	{
-		key: "tom",
+		key: "openhat",
 		offValue: "#4deeea",
 		onValue: "#b6fffe",
 	},
 	{
-		key: "openhat",
+		key: "cowbell",
 		offValue: "#0066ff",
 		onValue: "#5796f5",
 	},
 	{
-		key: "cowbell",
+		key: "hihat",
 		offValue: "#39c0ff",
 		onValue: "#9de0ff",
 	},
 	{
-		key: "hihat",
+		key: "crash",
 		offValue: "#74ee15",
 		onValue: "#b2f181",
 	},
 ];
 
 let changeColor = (beat, index) => {
-	let pad = document.querySelector(`.${beat} .pad:nth-child(${index}) input`);
-	if (pad.checked === true) {
+	let padCheck = document.querySelector(
+		`.${beat} .pad:nth-child(${index}) input`
+	);
+	let pad = document.querySelector(`.${beat} .pad:nth-child(${index})`);
+	console.log(pad.style);
+
+	let onColor;
+	let offColor;
+	colorPallet.map((ele) => {
+		if (ele.key == beat) {
+			onColor = ele.onValue;
+			offColor = ele.offValue;
+		}
+	});
+	if (padCheck.checked === true) {
+		pad.style.background = onColor;
+		pad.style.boxShadow = `0px 0px 10px 4px ${onColor}`;
 	} else {
+		pad.style.background = offColor;
+		pad.style.boxShadow = `0px 0px 17px 1px ${offColor}`;
 	}
 };
+
+let resetTunes = () => {
+	let pads = document.querySelectorAll(".pad");
+	pads.forEach((ele) => {
+		ele.childNodes[1].checked = false;
+		let index;
+		for (index = 1; index <= 8; index++) {
+			changeColor(ele.parentNode.className, index);
+		}
+	});
+};
+
+window.onload = resetTunes();
